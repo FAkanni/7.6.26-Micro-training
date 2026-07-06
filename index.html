@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DSMB Guided Training Prototype</title>
+    <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css?v=20260701-clear-text-cutout">
+  </head>
+  <body>
+    <div class="prototype-shell">
+      <header class="hero">
+        <div>
+          <div class="eyebrow">CROMS DSMB training prototype</div>
+          <h1>Guided Workflow Trainer</h1>
+          <p>
+            Practice DSMB and ISM/SO activities in a standalone training environment.
+            Select a module, start the walkthrough, then click the highlighted target to advance.
+          </p>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="visual-node">DSMB</div>
+          <div class="visual-line"></div>
+          <div class="visual-grid">
+            <span>Meetings</span>
+            <span>COI</span>
+            <span>Docs</span>
+            <span>Members</span>
+          </div>
+        </div>
+      </header>
+
+      <main class="workspace">
+        <aside class="module-rail" aria-label="Training modules">
+          <div class="rail-header">
+            <h2>Micro-Trainings</h2>
+            <p>Standalone modules built from the DSMB workflow map.</p>
+          </div>
+          <div id="roleFilter" class="role-filter" aria-label="Filter micro-trainings by role"></div>
+          <div id="moduleList" class="module-list"></div>
+        </aside>
+
+        <section class="trainer-panel" aria-label="Selected training">
+          <div class="training-toolbar">
+            <div>
+              <div class="eyebrow">Selected activity</div>
+              <h2 id="trainingTitle">Loading</h2>
+              <div id="trainingMeta" class="training-meta"></div>
+            </div>
+            <div class="toolbar-actions">
+              <button id="startButton" type="button" class="primary-action">Start Walkthrough</button>
+              <button id="backButton" type="button" class="secondary-action" disabled>Back</button>
+              <button id="skipButton" type="button" class="secondary-action" disabled>Skip</button>
+              <button id="resetButton" type="button" class="secondary-action" disabled>Stop</button>
+            </div>
+          </div>
+
+          <div class="progress-row" aria-live="polite">
+            <div class="progress-track">
+              <div id="progressFill" class="progress-fill"></div>
+            </div>
+            <span id="progressText" class="progress-text">Ready</span>
+          </div>
+
+          <div id="stage" class="stage" aria-label="Simulated CROMS training screen"></div>
+        </section>
+      </main>
+    </div>
+
+    <div id="backdrop" class="tour-backdrop" hidden></div>
+    <aside id="coachmark" class="coachmark" hidden></aside>
+
+    <script src="data/trainings.js"></script>
+  <script src="app.js?v=20260701-clear-text-cutout"></script>
+  </body>
+</html>
