@@ -1,0 +1,41 @@
+DSMB Guided Training Prototype
+
+How to open this on your computer
+
+1. Download the zip file.
+2. Unzip or extract the folder. Do not open index.html from inside the compressed zip preview.
+3. Open the extracted folder named dsmb-training-prototype.
+4. Double-click index.html.
+5. If prompted, open it with Chrome, Edge, Safari, or Firefox.
+
+Important
+
+- Keep the files and folders together. The page needs app.js, styles.css, data, and assets to stay beside index.html.
+- This is a standalone training prototype. It does not require CROMS login or internet access.
+- The names, study identifiers, grant numbers, document titles, emails, and dates are synthetic/deidentified training data.
+
+If the page opens blank or your browser blocks local files
+
+Mac:
+
+1. Open Terminal.
+2. Run:
+
+   cd "PATH_TO_THE_EXTRACTED/dsmb-training-prototype"
+   python3 -m http.server 8765
+
+3. Open this URL in a browser:
+
+   http://127.0.0.1:8765/
+
+Windows, if Python is installed:
+
+1. Open Command Prompt or PowerShell.
+2. Run:
+
+   cd "PATH_TO_THE_EXTRACTED\dsmb-training-prototype"
+   py -m http.server 8765
+
+3. Open this URL in a browser:
+
+   http://127.0.0.1:8765/
